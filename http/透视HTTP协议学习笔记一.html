@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>透视HTTP学习笔记一 | Peter&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    
+    <meta name="description" content="勤读立耕 立己达人">
+    
+    <link rel="preload" href="/assets/css/0.styles.5544a83d.css" as="style"><link rel="preload" href="/assets/js/app.64f64dbd.js" as="script"><link rel="preload" href="/assets/js/2.34a64a1a.js" as="script"><link rel="preload" href="/assets/js/19.96f42d38.js" as="script"><link rel="prefetch" href="/assets/js/10.350ba357.js"><link rel="prefetch" href="/assets/js/11.dc6f5ebe.js"><link rel="prefetch" href="/assets/js/12.31212d42.js"><link rel="prefetch" href="/assets/js/13.cc0591d8.js"><link rel="prefetch" href="/assets/js/14.a2d6c9c8.js"><link rel="prefetch" href="/assets/js/15.043cb5f8.js"><link rel="prefetch" href="/assets/js/16.5f049a97.js"><link rel="prefetch" href="/assets/js/17.ae9a8294.js"><link rel="prefetch" href="/assets/js/18.fea0475c.js"><link rel="prefetch" href="/assets/js/20.e3694e88.js"><link rel="prefetch" href="/assets/js/21.b3b51bd9.js"><link rel="prefetch" href="/assets/js/22.d0feb119.js"><link rel="prefetch" href="/assets/js/23.566fd3aa.js"><link rel="prefetch" href="/assets/js/24.0981684e.js"><link rel="prefetch" href="/assets/js/25.7e200c65.js"><link rel="prefetch" href="/assets/js/26.ad397e3d.js"><link rel="prefetch" href="/assets/js/27.67d89d20.js"><link rel="prefetch" href="/assets/js/28.92c56ac2.js"><link rel="prefetch" href="/assets/js/29.8274ac5e.js"><link rel="prefetch" href="/assets/js/3.074019bf.js"><link rel="prefetch" href="/assets/js/30.7d0f913e.js"><link rel="prefetch" href="/assets/js/31.70c2f88a.js"><link rel="prefetch" href="/assets/js/32.0d335149.js"><link rel="prefetch" href="/assets/js/33.281a65e3.js"><link rel="prefetch" href="/assets/js/34.00baa1f6.js"><link rel="prefetch" href="/assets/js/35.a4b8d8f9.js"><link rel="prefetch" href="/assets/js/36.12d24768.js"><link rel="prefetch" href="/assets/js/37.8f5e37c3.js"><link rel="prefetch" href="/assets/js/38.58a16c06.js"><link rel="prefetch" href="/assets/js/39.0e8037eb.js"><link rel="prefetch" href="/assets/js/4.70c13cc5.js"><link rel="prefetch" href="/assets/js/40.4fbda46f.js"><link rel="prefetch" href="/assets/js/41.6a79cfc0.js"><link rel="prefetch" href="/assets/js/42.102b4379.js"><link rel="prefetch" href="/assets/js/43.c6f7deb5.js"><link rel="prefetch" href="/assets/js/44.bc668c3e.js"><link rel="prefetch" href="/assets/js/45.21811477.js"><link rel="prefetch" href="/assets/js/46.2abbf7bc.js"><link rel="prefetch" href="/assets/js/47.d6420d44.js"><link rel="prefetch" href="/assets/js/48.abdffd73.js"><link rel="prefetch" href="/assets/js/49.f0c2666f.js"><link rel="prefetch" href="/assets/js/5.63717e30.js"><link rel="prefetch" href="/assets/js/50.b73f3ea9.js"><link rel="prefetch" href="/assets/js/51.6fde9ef6.js"><link rel="prefetch" href="/assets/js/52.15fa78fe.js"><link rel="prefetch" href="/assets/js/53.9927ccd8.js"><link rel="prefetch" href="/assets/js/54.2bfc3003.js"><link rel="prefetch" href="/assets/js/55.b59740b1.js"><link rel="prefetch" href="/assets/js/56.b14b7b22.js"><link rel="prefetch" href="/assets/js/57.011c31c4.js"><link rel="prefetch" href="/assets/js/58.4af8e6d0.js"><link rel="prefetch" href="/assets/js/59.586be01a.js"><link rel="prefetch" href="/assets/js/6.00d18832.js"><link rel="prefetch" href="/assets/js/60.1726ec8d.js"><link rel="prefetch" href="/assets/js/61.c2e2dc9f.js"><link rel="prefetch" href="/assets/js/62.ce077c71.js"><link rel="prefetch" href="/assets/js/63.7b3e34ae.js"><link rel="prefetch" href="/assets/js/64.e018f0da.js"><link rel="prefetch" href="/assets/js/7.01db3305.js"><link rel="prefetch" href="/assets/js/8.7914ee56.js"><link rel="prefetch" href="/assets/js/9.cfd3eae1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5544a83d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Peter's Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/js/" class="nav-link">
+  JavaSript
+</a></div><div class="nav-item"><a href="/html/" class="nav-link">
+  HTML
+</a></div><div class="nav-item"><a href="/css/" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><a href="/vuejs/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/mysql/" class="nav-link">
+  MySQL
+</a></div><div class="nav-item"><a href="/nodejs/" class="nav-link">
+  NodeJS
+</a></div><div class="nav-item"><a href="/python/" class="nav-link">
+  Python
+</a></div><div class="nav-item"><a href="/android/" class="nav-link">
+  Android
+</a></div><div class="nav-item"><a href="/http/" class="nav-link router-link-active">
+  HTTP
+</a></div><div class="nav-item"><a href="/redis/" class="nav-link">
+  Redis
+</a></div><div class="nav-item"><a href="/algorithm/" class="nav-link">
+  数据结构与算法
+</a></div><div class="nav-item"><a href="/project/" class="nav-link">
+  工程化
+</a></div> <a href="https://github.com/peterzhangxr/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/js/" class="nav-link">
+  JavaSript
+</a></div><div class="nav-item"><a href="/html/" class="nav-link">
+  HTML
+</a></div><div class="nav-item"><a href="/css/" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><a href="/vuejs/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/mysql/" class="nav-link">
+  MySQL
+</a></div><div class="nav-item"><a href="/nodejs/" class="nav-link">
+  NodeJS
+</a></div><div class="nav-item"><a href="/python/" class="nav-link">
+  Python
+</a></div><div class="nav-item"><a href="/android/" class="nav-link">
+  Android
+</a></div><div class="nav-item"><a href="/http/" class="nav-link router-link-active">
+  HTTP
+</a></div><div class="nav-item"><a href="/redis/" class="nav-link">
+  Redis
+</a></div><div class="nav-item"><a href="/algorithm/" class="nav-link">
+  数据结构与算法
+</a></div><div class="nav-item"><a href="/project/" class="nav-link">
+  工程化
+</a></div> <a href="https://github.com/peterzhangxr/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/http/透视HTTP协议学习笔记一.html" class="active sidebar-link">透视HTTP学习笔记一</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/http/透视HTTP协议学习笔记一.html#_01-时势与英雄-http的前世今生" class="sidebar-link">01 | 时势与英雄：HTTP的前世今生</a></li><li class="sidebar-sub-header"><a href="/http/透视HTTP协议学习笔记一.html#_02-http是什么-http又不是什么" class="sidebar-link">02 | HTTP是什么？HTTP又不是什么？</a></li><li class="sidebar-sub-header"><a href="/http/透视HTTP协议学习笔记一.html#_03-http世界全览-上-与http相关的各种概念" class="sidebar-link">03 | HTTP世界全览（上）：与HTTP相关的各种概念</a></li><li class="sidebar-sub-header"><a href="/http/透视HTTP协议学习笔记一.html#_04-http世界全览-下-与http相关的各种协议" class="sidebar-link">04 | HTTP世界全览（下）：与HTTP相关的各种协议</a></li></ul></li><li><a href="/http/透视HTTP协议学习笔记二.html" class="sidebar-link">透视HTTP协议学习笔记二</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="透视http学习笔记一"><a href="#透视http学习笔记一" class="header-anchor">#</a> 透视HTTP学习笔记一</h1> <h2 id="_01-时势与英雄-http的前世今生"><a href="#_01-时势与英雄-http的前世今生" class="header-anchor">#</a> 01 | 时势与英雄：HTTP的前世今生</h2> <ul><li>HTTP 协议始于三十年前蒂姆·伯纳斯 - 李的一篇论文；</li> <li>HTTP/0.9 是个简单的文本协议，只能获取文本资源；</li> <li>HTTP/1.0 确立了大部分现在使用的技术，但它不是正式标准；</li> <li>HTTP/1.1 是目前互联网上使用最广泛的协议，功能也非常完善；</li> <li>HTTP/2 基于 Google 的 SPDY 协议，注重性能改善，但还未普及；</li> <li>HTTP/3 基于 Google 的 QUIC 协议，是将来的发展方向。</li></ul> <h2 id="_02-http是什么-http又不是什么"><a href="#_02-http是什么-http又不是什么" class="header-anchor">#</a> 02 | HTTP是什么？HTTP又不是什么？</h2> <blockquote><p>HTTP是一个用在计算机世界里的协议。它使用计算机能够理解的语言确立了一种计算机之间交流通信的规范，以及相关的各种控制和错误处理方式。</p></blockquote> <blockquote><p>HTTP 是一个在计算机世界里专门用来在两点之间传输数据的约定和规范。</p></blockquote> <blockquote><p>HTTP 是一个在计算机世界里专门在两点之间传输文字、图片、音频、视频等超文本数据的约定和规范</p></blockquote> <h2 id="_03-http世界全览-上-与http相关的各种概念"><a href="#_03-http世界全览-上-与http相关的各种概念" class="header-anchor">#</a> 03 | HTTP世界全览（上）：与HTTP相关的各种概念</h2> <h3 id="浏览器"><a href="#浏览器" class="header-anchor">#</a> 浏览器</h3> <p>浏览器本质上是一个 HTTP 协议中的请求方，使用 HTTP 协议获取网络上的各种资源。</p> <p>在 HTTP 协议里，浏览器的角色被称为“User Agent”即“用户代理”，意思是作为访问者的“代理”来发起 HTTP 请求。不过在不引起混淆的情况下，我们通常都简单地称之为“客户端”。</p> <h3 id="web-服务器"><a href="#web-服务器" class="header-anchor">#</a> Web 服务器</h3> <p>当我们谈到“Web 服务器”时有两个层面的含义：硬件和软件。</p> <p>硬件含义就是物理形式或“云”形式的机器，在大多数情况下它可能不是一台服务器，而是利用反向代理、负载均衡等技术组成的庞大集群。但从外界看来，它仍然表现为一台机器，但这个形象是“虚拟的”。</p> <p>软件含义的 Web 服务器可能我们更为关心，它就是提供 Web 服务的应用程序，通常会运行在硬件含义的服务器上。它利用强大的硬件能力响应海量的客户端 HTTP 请求，处理磁盘上的网页、图片等静态文件，或者把请求转发给后面的 Tomcat、Node.js 等业务应用，返回动态的信息。</p> <h3 id="cdn"><a href="#cdn" class="header-anchor">#</a> CDN</h3> <p>CDN，全称是“Content Delivery Network”，翻译过来就是“内容分发网络”。它应用了 HTTP 协议里的缓存和代理技术，代替源站响应客户端的请求。</p> <p>简单来说，它可以缓存源站的数据，让浏览器的请求不用“千里迢迢”地到达源站服务器，直接在“半路”就可以获取响应。如果 CDN 的调度算法很优秀，更可以找到离用户最近的节点，大幅度缩短响应时间。</p> <h3 id="爬虫"><a href="#爬虫" class="header-anchor">#</a> 爬虫</h3> <p>但 HTTP 协议并没有规定用户代理后面必须是“真正的人类”，它也完全可以是“机器人”，这些“机器人”的正式名称就叫做“爬虫”（Crawler），实际上是一种可以自动访问 Web 资源的应用程序。</p> <h3 id="waf"><a href="#waf" class="header-anchor">#</a> WAF</h3> <p>WAF 是近几年比较“火”的一个词，意思是“网络应用防火墙”。与硬件“防火墙”类似，它是应用层面的“防火墙”，专门检测 HTTP 流量，是防护 Web 应用的安全技术。</p> <p>WAF 通常位于 Web 服务器之前，可以阻止如 SQL 注入、跨站脚本等攻击，目前应用较多的一个开源项目是 ModSecurity，它能够完全集成进 Apache 或 Nginx。</p> <h3 id="你觉得-cdn-在对待浏览器和爬虫时会有差异吗-为什么"><a href="#你觉得-cdn-在对待浏览器和爬虫时会有差异吗-为什么" class="header-anchor">#</a> 你觉得 CDN 在对待浏览器和爬虫时会有差异吗？为什么？</h3> <p>CDN 应当是不区分的，因为爬虫本身也是对 Web 资源的访问，且对于爬虫识别并不是 100% 准确的，因此 CDN 只会去计算实际使用了多少资源而不管其中多少来自爬虫；</p> <h3 id="你怎么理解-webservice-与-web-server-这两个非常相似的词"><a href="#你怎么理解-webservice-与-web-server-这两个非常相似的词" class="header-anchor">#</a> 你怎么理解 WebService 与 Web Server 这两个非常相似的词？</h3> <p>Web Service 是一种由 W3C 定义的应用服务开发规范，使用 client-server 主从架构，通常使用 WSDL 定义服务接口，使用 HTTP 协议传输 XML 或 SOAP 消息，也就是说，它是一个基于 Web（HTTP）的服务架构技术，既可以运行在内网，也可以在适当保护后运行在外网。</p> <h2 id="_04-http世界全览-下-与http相关的各种协议"><a href="#_04-http世界全览-下-与http相关的各种协议" class="header-anchor">#</a> 04 | HTTP世界全览（下）：与HTTP相关的各种协议</h2> <h3 id="tcp-ip"><a href="#tcp-ip" class="header-anchor">#</a> TCP/IP</h3> <p>TCP/IP 协议实际上是一系列网络通信协议的统称，其中最核心的两个协议是 TCP 和 IP，其他的还有 UDP、ICMP、ARP 等等，共同构成了一个复杂但有层次的协议栈。</p> <p>这个协议栈有四层，最上层是“应用层”，最下层是“链接层”，TCP 和 IP 则在中间：TCP 属于“传输层”，IP 属于“网际层”。</p> <p>IP协议是“Internet Protocol”的缩写，主要目的是解决寻址和路由问题，以及如何在两点间传送数据包。IP 协议使用“IP 地址”的概念来定位互联网上的每一台计算机。</p> <p>TCP 协议是“Transmission Control Protocol”的缩写，意思是“传输控制协议”，它位于 IP 协议之上，基于 IP 协议提供可靠的、字节流形式的通信，是 HTTP 协议得以实现的基础。</p> <h3 id="dns"><a href="#dns" class="header-anchor">#</a> DNS</h3> <p>目前全世界有 13 组根 DNS 服务器，下面再有许多的顶级 DNS、权威 DNS 和更小的本地 DNS，逐层递归地实现域名查询。</p> <h3 id="uri-url"><a href="#uri-url" class="header-anchor">#</a> URI/URL</h3> <ul><li>协议名：即访问该资源应当使用的协议，在这里是“http”；</li> <li>主机名：即互联网上主机的标记，可以是域名或 IP 地址，在这里是“nginx.org”；</li> <li>路径：即资源在主机上的位置，使用“/”分隔多级目录，在这里是“/en/download.html”。</li></ul> <h3 id="https"><a href="#https" class="header-anchor">#</a> HTTPS</h3> <p>HTTPS 就相当于这个比喻中的“火星文”，它的全称是“HTTP over SSL/TLS”，也就是运行在 SSL/TLS 协议上的 HTTP。</p> <h3 id="代理"><a href="#代理" class="header-anchor">#</a> 代理</h3> <p>代理（Proxy）是 HTTP 协议中请求方和应答方中间的一个环节，作为“中转站”，既可以转发客户端的请求，也可以转发服务器的应答。</p> <ul><li>匿名代理：完全“隐匿”了被代理的机器，外界看到的只是代理服务器；</li> <li>透明代理：顾名思义，它在传输过程中是“透明开放”的，外界既知道代理，也知道客户端；</li> <li>正向代理：靠近客户端，代表客户端向服务器发送请求；</li> <li>反向代理：靠近服务器端，代表服务器响应客户端的请求；</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/http/透视HTTP协议学习笔记二.html">
+        透视HTTP协议学习笔记二
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.64f64dbd.js" defer></script><script src="/assets/js/2.34a64a1a.js" defer></script><script src="/assets/js/19.96f42d38.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vuex面试题 | Peter&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    
+    <meta name="description" content="勤读立耕 立己达人">
+    
+    <link rel="preload" href="/assets/css/0.styles.5544a83d.css" as="style"><link rel="preload" href="/assets/js/app.64f64dbd.js" as="script"><link rel="preload" href="/assets/js/2.34a64a1a.js" as="script"><link rel="preload" href="/assets/js/62.ce077c71.js" as="script"><link rel="prefetch" href="/assets/js/10.350ba357.js"><link rel="prefetch" href="/assets/js/11.dc6f5ebe.js"><link rel="prefetch" href="/assets/js/12.31212d42.js"><link rel="prefetch" href="/assets/js/13.cc0591d8.js"><link rel="prefetch" href="/assets/js/14.a2d6c9c8.js"><link rel="prefetch" href="/assets/js/15.043cb5f8.js"><link rel="prefetch" href="/assets/js/16.5f049a97.js"><link rel="prefetch" href="/assets/js/17.ae9a8294.js"><link rel="prefetch" href="/assets/js/18.fea0475c.js"><link rel="prefetch" href="/assets/js/19.96f42d38.js"><link rel="prefetch" href="/assets/js/20.e3694e88.js"><link rel="prefetch" href="/assets/js/21.b3b51bd9.js"><link rel="prefetch" href="/assets/js/22.d0feb119.js"><link rel="prefetch" href="/assets/js/23.566fd3aa.js"><link rel="prefetch" href="/assets/js/24.0981684e.js"><link rel="prefetch" href="/assets/js/25.7e200c65.js"><link rel="prefetch" href="/assets/js/26.ad397e3d.js"><link rel="prefetch" href="/assets/js/27.67d89d20.js"><link rel="prefetch" href="/assets/js/28.92c56ac2.js"><link rel="prefetch" href="/assets/js/29.8274ac5e.js"><link rel="prefetch" href="/assets/js/3.074019bf.js"><link rel="prefetch" href="/assets/js/30.7d0f913e.js"><link rel="prefetch" href="/assets/js/31.70c2f88a.js"><link rel="prefetch" href="/assets/js/32.0d335149.js"><link rel="prefetch" href="/assets/js/33.281a65e3.js"><link rel="prefetch" href="/assets/js/34.00baa1f6.js"><link rel="prefetch" href="/assets/js/35.a4b8d8f9.js"><link rel="prefetch" href="/assets/js/36.12d24768.js"><link rel="prefetch" href="/assets/js/37.8f5e37c3.js"><link rel="prefetch" href="/assets/js/38.58a16c06.js"><link rel="prefetch" href="/assets/js/39.0e8037eb.js"><link rel="prefetch" href="/assets/js/4.70c13cc5.js"><link rel="prefetch" href="/assets/js/40.4fbda46f.js"><link rel="prefetch" href="/assets/js/41.6a79cfc0.js"><link rel="prefetch" href="/assets/js/42.102b4379.js"><link rel="prefetch" href="/assets/js/43.c6f7deb5.js"><link rel="prefetch" href="/assets/js/44.bc668c3e.js"><link rel="prefetch" href="/assets/js/45.21811477.js"><link rel="prefetch" href="/assets/js/46.2abbf7bc.js"><link rel="prefetch" href="/assets/js/47.d6420d44.js"><link rel="prefetch" href="/assets/js/48.abdffd73.js"><link rel="prefetch" href="/assets/js/49.f0c2666f.js"><link rel="prefetch" href="/assets/js/5.63717e30.js"><link rel="prefetch" href="/assets/js/50.b73f3ea9.js"><link rel="prefetch" href="/assets/js/51.6fde9ef6.js"><link rel="prefetch" href="/assets/js/52.15fa78fe.js"><link rel="prefetch" href="/assets/js/53.9927ccd8.js"><link rel="prefetch" href="/assets/js/54.2bfc3003.js"><link rel="prefetch" href="/assets/js/55.b59740b1.js"><link rel="prefetch" href="/assets/js/56.b14b7b22.js"><link rel="prefetch" href="/assets/js/57.011c31c4.js"><link rel="prefetch" href="/assets/js/58.4af8e6d0.js"><link rel="prefetch" href="/assets/js/59.586be01a.js"><link rel="prefetch" href="/assets/js/6.00d18832.js"><link rel="prefetch" href="/assets/js/60.1726ec8d.js"><link rel="prefetch" href="/assets/js/61.c2e2dc9f.js"><link rel="prefetch" href="/assets/js/63.7b3e34ae.js"><link rel="prefetch" href="/assets/js/64.e018f0da.js"><link rel="prefetch" href="/assets/js/7.01db3305.js"><link rel="prefetch" href="/assets/js/8.7914ee56.js"><link rel="prefetch" href="/assets/js/9.cfd3eae1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.5544a83d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Peter's Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/js/" class="nav-link">
+  JavaSript
+</a></div><div class="nav-item"><a href="/html/" class="nav-link">
+  HTML
+</a></div><div class="nav-item"><a href="/css/" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><a href="/vuejs/" class="nav-link router-link-active">
+  Vue
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/mysql/" class="nav-link">
+  MySQL
+</a></div><div class="nav-item"><a href="/nodejs/" class="nav-link">
+  NodeJS
+</a></div><div class="nav-item"><a href="/python/" class="nav-link">
+  Python
+</a></div><div class="nav-item"><a href="/android/" class="nav-link">
+  Android
+</a></div><div class="nav-item"><a href="/http/" class="nav-link">
+  HTTP
+</a></div><div class="nav-item"><a href="/redis/" class="nav-link">
+  Redis
+</a></div><div class="nav-item"><a href="/algorithm/" class="nav-link">
+  数据结构与算法
+</a></div><div class="nav-item"><a href="/project/" class="nav-link">
+  工程化
+</a></div> <a href="https://github.com/peterzhangxr/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/js/" class="nav-link">
+  JavaSript
+</a></div><div class="nav-item"><a href="/html/" class="nav-link">
+  HTML
+</a></div><div class="nav-item"><a href="/css/" class="nav-link">
+  CSS
+</a></div><div class="nav-item"><a href="/vuejs/" class="nav-link router-link-active">
+  Vue
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/mysql/" class="nav-link">
+  MySQL
+</a></div><div class="nav-item"><a href="/nodejs/" class="nav-link">
+  NodeJS
+</a></div><div class="nav-item"><a href="/python/" class="nav-link">
+  Python
+</a></div><div class="nav-item"><a href="/android/" class="nav-link">
+  Android
+</a></div><div class="nav-item"><a href="/http/" class="nav-link">
+  HTTP
+</a></div><div class="nav-item"><a href="/redis/" class="nav-link">
+  Redis
+</a></div><div class="nav-item"><a href="/algorithm/" class="nav-link">
+  数据结构与算法
+</a></div><div class="nav-item"><a href="/project/" class="nav-link">
+  工程化
+</a></div> <a href="https://github.com/peterzhangxr/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/vuejs/Vue Cli插件开发.html" class="sidebar-link">Vue插件开发</a></li><li><a href="/vuejs/Vue模版编译.html" class="sidebar-link">/vuejs/Vue模版编译.html</a></li><li><a href="/vuejs/vuex指南.html" class="sidebar-link">Vuex指南</a></li><li><a href="/vuejs/vuex面试题.html" class="active sidebar-link">Vuex面试题</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuejs/vuex面试题.html#在vuex中使用mutation要注意什么。" class="sidebar-link">在Vuex中使用mutation要注意什么。</a></li><li class="sidebar-sub-header"><a href="/vuejs/vuex面试题.html#vuex中action和mutation有什么区别" class="sidebar-link">Vuex中action和mutation有什么区别？</a></li><li class="sidebar-sub-header"><a href="/vuejs/vuex面试题.html#在模块中-getter和mutation接收的第一个参数state-是全局的还是模块的" class="sidebar-link">在模块中，getter和mutation接收的第一个参数state，是全局的还是模块的？</a></li><li class="sidebar-sub-header"><a href="/vuejs/vuex面试题.html#在模块中-getter和mutation和action中怎么访问全局的state和getter" class="sidebar-link">在模块中，getter和mutation和action中怎么访问全局的state和getter？</a></li><li class="sidebar-sub-header"><a href="/vuejs/vuex面试题.html#用过vuex模块的命名空间吗-为什么使用-怎么使用。" class="sidebar-link">用过Vuex模块的命名空间吗？为什么使用，怎么使用。</a></li><li class="sidebar-sub-header"><a href="/vuejs/vuex面试题.html#怎么在带命名空间的模块内提交全局的mutation和action" class="sidebar-link">怎么在带命名空间的模块内提交全局的mutation和action？</a></li><li class="sidebar-sub-header"><a href="/vuejs/vuex面试题.html#怎么在带命名空间的模块内注册全局的action" class="sidebar-link">怎么在带命名空间的模块内注册全局的action？</a></li><li class="sidebar-sub-header"><a href="/vuejs/vuex面试题.html#怎么使用mapstate-mapgetters-mapactions和mapmutations这些函数来绑定带命名空间的模块" class="sidebar-link">怎么使用mapState，mapGetters，mapActions和mapMutations这些函数来绑定带命名空间的模块？</a></li><li class="sidebar-sub-header"><a href="/vuejs/vuex面试题.html#vuex插件有用过吗-怎么用简单介绍一下" class="sidebar-link">Vuex插件有用过吗？怎么用简单介绍一下？</a></li><li class="sidebar-sub-header"><a href="/vuejs/vuex面试题.html#在vuex插件中怎么监听组件中提交mutation和action" class="sidebar-link">在Vuex插件中怎么监听组件中提交mutation和action？</a></li></ul></li><li><a href="/vuejs/数据劫持.html" class="sidebar-link">2.0数据劫持原理</a></li><li><a href="/vuejs/组件间通信.html" class="sidebar-link">Vue组件间通信</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vuex面试题"><a href="#vuex面试题" class="header-anchor">#</a> Vuex面试题</h1> <h2 id="在vuex中使用mutation要注意什么。"><a href="#在vuex中使用mutation要注意什么。" class="header-anchor">#</a> 在Vuex中使用mutation要注意什么。</h2> <p>mutation 必须是同步函数</p> <h2 id="vuex中action和mutation有什么区别"><a href="#vuex中action和mutation有什么区别" class="header-anchor">#</a> Vuex中action和mutation有什么区别？</h2> <ul><li>action 提交的是 mutation，而不是直接变更状态。mutation可以直接变更状态。</li> <li>action 可以包含任意异步操作。mutation只能是同步操作。</li> <li>提交方式不同，action 是用this.$store.dispatch('ACTION_NAME',data)来提交。mutation是用this.$store.commit('SET_NUMBER',10)来提交。</li> <li>接收参数不同，mutation第一个参数是state，而action第一个参数是context，其包含了</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+    state<span class="token punctuation">,</span>      <span class="token comment">// 等同于 `store.state`，若在模块中则为局部状态</span>
+    rootState<span class="token punctuation">,</span>  <span class="token comment">// 等同于 `store.state`，只存在于模块中</span>
+    commit<span class="token punctuation">,</span>     <span class="token comment">// 等同于 `store.commit`</span>
+    dispatch<span class="token punctuation">,</span>   <span class="token comment">// 等同于 `store.dispatch`</span>
+    getters<span class="token punctuation">,</span>    <span class="token comment">// 等同于 `store.getters`</span>
+    rootGetters <span class="token comment">// 等同于 `store.getters`，只存在于模块中</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h2 id="在模块中-getter和mutation接收的第一个参数state-是全局的还是模块的"><a href="#在模块中-getter和mutation接收的第一个参数state-是全局的还是模块的" class="header-anchor">#</a> 在模块中，getter和mutation接收的第一个参数state，是全局的还是模块的？</h2> <p>第一个参数state是模块的state，也就是局部的state。</p> <h2 id="在模块中-getter和mutation和action中怎么访问全局的state和getter"><a href="#在模块中-getter和mutation和action中怎么访问全局的state和getter" class="header-anchor">#</a> 在模块中，getter和mutation和action中怎么访问全局的state和getter？</h2> <ul><li>在getter中可以通过第三个参数rootState访问到全局的state,可以通过第四个参数rootGetters访问到全局的getter。</li> <li>在mutation中不可以访问全局的satat和getter，只能访问到局部的state。</li> <li>在action中第一个参数context中的context.rootState访问到全局的state，context.rootGetters访问到全局的getter。</li></ul> <h2 id="用过vuex模块的命名空间吗-为什么使用-怎么使用。"><a href="#用过vuex模块的命名空间吗-为什么使用-怎么使用。" class="header-anchor">#</a> 用过Vuex模块的命名空间吗？为什么使用，怎么使用。</h2> <p>默认情况下，模块内部的action、mutation和getter是注册在全局命名空间，如果多个模块中action、mutation的命名是一样的，那么提交mutation、action时，将会触发所有模块中命名相同的mutation、action。</p> <p>这样有太多的耦合，如果要使你的模块具有更高的封装度和复用性，你可以通过添加namespaced: true 的方式使其成为带命名空间的模块。</p> <h2 id="怎么在带命名空间的模块内提交全局的mutation和action"><a href="#怎么在带命名空间的模块内提交全局的mutation和action" class="header-anchor">#</a> 怎么在带命名空间的模块内提交全局的mutation和action？</h2> <p>将 { root: true } 作为第三参数传给 dispatch 或 commit 即可。</p> <h2 id="怎么在带命名空间的模块内注册全局的action"><a href="#怎么在带命名空间的模块内注册全局的action" class="header-anchor">#</a> 怎么在带命名空间的模块内注册全局的action？</h2> <div class="language-js extra-class"><pre class="language-js"><code>	<span class="token literal-property property">actions</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token literal-property property">actionA</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+				<span class="token literal-property property">root</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+				<span class="token function">handler</span> <span class="token punctuation">(</span><span class="token parameter">context<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+</code></pre></div><h2 id="怎么使用mapstate-mapgetters-mapactions和mapmutations这些函数来绑定带命名空间的模块"><a href="#怎么使用mapstate-mapgetters-mapactions和mapmutations这些函数来绑定带命名空间的模块" class="header-anchor">#</a> 怎么使用mapState，mapGetters，mapActions和mapMutations这些函数来绑定带命名空间的模块？</h2> <p>首先使用createNamespacedHelpers创建基于某个命名空间辅助函数</p> <h2 id="vuex插件有用过吗-怎么用简单介绍一下"><a href="#vuex插件有用过吗-怎么用简单介绍一下" class="header-anchor">#</a> Vuex插件有用过吗？怎么用简单介绍一下？</h2> <p>Vuex插件就是一个函数，它接收 store 作为唯一参数。在Vuex.Store构造器选项plugins引入。 在store/plugin.js文件中写入</p> <h2 id="在vuex插件中怎么监听组件中提交mutation和action"><a href="#在vuex插件中怎么监听组件中提交mutation和action" class="header-anchor">#</a> 在Vuex插件中怎么监听组件中提交mutation和action？</h2> <ul><li>用Vuex.Store的实例方法subscribe监听组件中提交mutation</li> <li>用Vuex.Store的实例方法subscribeAction监听组件中提交action 在store/plugin.js文件中写入</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vuejs/vuex指南.html" class="prev">
+        Vuex指南
+      </a></span> <span class="next"><a href="/vuejs/数据劫持.html">
+        2.0数据劫持原理
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.64f64dbd.js" defer></script><script src="/assets/js/2.34a64a1a.js" defer></script><script src="/assets/js/62.ce077c71.js" defer></script>
+  </body>
+</html>

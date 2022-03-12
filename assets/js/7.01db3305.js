@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{409:function(t,e,n){"use strict";n.r(e);var s=n(55),o=Object(s.a)({},(function(){var t=this.$createElement,e=this._self._c||t;return e("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[e("blockquote",[e("p",[this._v("勤读力耕，立己达人，弘农学，扬国光")])])])}),[],!1,null,null,null);e.default=o.exports}}]);
